@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install latest Typst
         uses: typst-community/setup-typst@v5
@@ -26,7 +26,7 @@ jobs:
         run: bash scripts/build.sh
 
       - name: Upload PDFs as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: typst-pdfs
           path: "**/*.pdf"
