@@ -3,7 +3,7 @@ set -e
 
 # funny animation tho
 find . -type f -name "*.typ" ! -path "*/\.*" | while read -r typ_file; do
-    echo -en "  typst compile $typ_file \r"
+    echo -en "  typst compile $typ_file \033[J\r"
     typst compile "$typ_file"
 done
 
